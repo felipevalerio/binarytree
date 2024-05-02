@@ -11,14 +11,14 @@ Most things that I like to study have somekind of tree on it. Databases, data co
 
 ## What's the problem with that?
 
-None. The thing is that its been a while since I wrote a tree (binary tree), it was in college fucking 6 years ago.
+None. The thing is that its been a while since I wrote a tree (binary tree), I was in college so it was fucking 6 years ago.
 My current job don't require me to write one, so I'm out of practice and I want to have a deep understanding about databases
-and to do that I have to remember how to build a binary tree (of course not only that but that's a different story).
+and to do that I have to remember how to build a binary tree (of course it's not only that but that's a different story).
 
 
 ## But how's a tree used in a database?
 
-I'm glad you asked that, dear anon. A database system (DBMS) can be seen as just a bunch of softwares pilled [together](https://www.mongodb.com/resources/basics/database-management-system).
+I'm glad you asked that, dear anon. A database system (DBMS) can be seen as "just" a bunch of softwares pilled [together](https://www.mongodb.com/resources/basics/database-management-system).
 Take the storage engine for example. It's responsible for storing, retrieving and organizing/managing data in memory and on disk in a persistent manner. 
 The data is stored in something called *data files*, and how those files are organized? You got it, with a tree data structure. [B-Trees](https://en.wikipedia.org/wiki/B-tree) or [LSM Trees](https://en.wikipedia.org/wiki/Log-structured_merge-tree)
 
