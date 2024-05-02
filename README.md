@@ -38,7 +38,9 @@ So I've always seen these kind of structure as a problem that I was always tryin
 Now I can see that these kind of data structures are just a solution to how you can represent data (be data files or SQL Tokens).
 I only need to *understand* to use it, and if we're talking about problems in the database, man, we have litterary a fucking
 [NP-Hard problem](https://www.querifylabs.com/blog/cross-product-suppression-in-join-order-planning) in the query engine.
-That is a problem and it is in fact hard. So with this new mindset I hope to put in practice some of the stuff I've been studying 
+That is a problem and it is in fact hard. 
+So with this new mindset I hope to put in practice some of the stuff I've been studying 
 about databases for a while.
 
+And that's it.
 Cheers!
