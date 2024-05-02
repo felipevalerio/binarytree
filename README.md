@@ -24,7 +24,7 @@ The data is stored in something called *data files*, and how those files are org
 
 But let's get out of the storage engine part, let's see the query engine, the real deal. Well, here we can find a tree data structure right from the begining.
 When we write a SQL query like `SELECT id, name FROM t_user WHERE status = 'ACTIVE' AND age > 18` the query will go to the lexical parser which will split the query into atomic symbols called Tokens.
-Tokens are classified into keywords (like SELECT for example), operators (+, * etc...), conditions ( =, AND) you got the idea. And then the parser will represent those tokens as an AST [Abstract Syntatic Tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree)
+Tokens are classified into keywords (like SELECT for example), operators (+, *), conditions ( =, AND) you got the idea. And then the parser will represent those tokens as an AST [Abstract Syntatic Tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree)
 
 [Check this out](https://shardingsphere.apache.org/document/current/en/reference/sharding/parse/).
 
