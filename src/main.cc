@@ -10,11 +10,6 @@ struct Node {
 typedef struct Node Node;
 
 
-void create_tree(Node **root_node) {
-
-	*root_node = NULL;
-}
-
 
 void insert(Node **root_node, int input_value) {
 
@@ -38,7 +33,12 @@ void insert(Node **root_node, int input_value) {
 
 int main() {
 
-	
+	Node **root = NULL;
+
+	insert(root, 10);
+	insert(root, 20);
+	insert(root, 30);
+	insert(root, 40);
 
 	return 0;
 }
