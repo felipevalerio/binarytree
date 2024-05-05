@@ -31,6 +31,14 @@ void insert(Node **root_node, int input_value) {
 }
 
 
+void print_tree(Node *root) {
+    if(root != NULL){
+        print_tree(root->left);
+		std::cout << " " << root->value << std::endl;
+        print_tree(root->right);
+    }
+}
+
 int main() {
 
 	Node **root = NULL;
@@ -39,6 +47,10 @@ int main() {
 	insert(root, 20);
 	insert(root, 30);
 	insert(root, 40);
+
+	print_tree(*root);
+
+
 
 	return 0;
 }
