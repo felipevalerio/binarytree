@@ -4,18 +4,16 @@ using namespace std;
 struct Node {
 
 	int value;
-	struct Node *right;
-	struct Node *left;
+	struct Node* right;
+	struct Node* left;
 };
-typedef struct Node Node;
 
 
 
 void insert(Node *root_node, int input_value) {
 
 	if (root_node == NULL) {
-
-		root_node = (Node *)malloc(sizeof(Node));
+		root_node = new Node();
 		root_node->left = NULL;
 		root_node->right = NULL;
 		root_node->value = input_value;
@@ -31,21 +29,18 @@ void insert(Node *root_node, int input_value) {
 }
 
 
+
 void print_in_order(Node *root){
     if(root != NULL){
+
         print_in_order(root->left);
         std::cout << " " << root->value << std::endl;
         print_in_order(root->right);
-    }
+    } else {
+		std::cout << "root e NULL" << std::endl;
+	}
 }
 
-void inorderTraversal(Node* root) {
-    if (!root)
-        return;
-    inorderTraversal(root->left);
-    std::cout << root->value << " " << std::endl;
-    inorderTraversal(root->right);
-}
 
 
 int main() {
@@ -59,7 +54,6 @@ int main() {
 
 	std::cout << "Print: " << std::endl;
 	print_in_order(root);
-
 
 
 	return 0;

@@ -1,6 +1,13 @@
 {
 	"files.associations": {
 		"iostream": "cpp",
-		"ostream": "cpp"
+		"ostream": "cpp",
+		"chrono": "cpp",
+		"functional": "cpp",
+		"optional": "cpp",
+		"system_error": "cpp",
+		"type_traits": "cpp",
+		"xlocnum": "cpp",
+		"xtr1common": "cpp"
 	}
 }
