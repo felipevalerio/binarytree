@@ -10,34 +10,39 @@ struct Node {
 
 
 
-void insert(Node *root_node, int input_value) {
+Node *empty_node(int value) {
 
-	if (root_node == NULL) {
-		root_node = new Node();
-		root_node->left = NULL;
-		root_node->right = NULL;
-		root_node->value = input_value;
+	Node *root_node = (Node *)malloc(sizeof(Node));
+	root_node->value = value;
+	root_node->left = NULL;
+	root_node->right = NULL;
 
-	} else {
-
-		if (input_value < root_node->value) {
-			insert(root_node->left, input_value);
-		} else {
-			insert(root_node->right, input_value);
-		}
-	}
+	return root_node;
 }
 
 
 
-void print_in_order(Node *root){
-    if(root != NULL){
+Node *insert(Node *root_node, int input_value) {
 
-        print_in_order(root->left);
-        std::cout << " " << root->value << std::endl;
-        print_in_order(root->right);
-    } else {
-		std::cout << "root e NULL" << std::endl;
+	if (root_node == NULL) { return empty_node(input_value); } 
+	
+	if (input_value < root_node->value) {
+			root_node->left = insert(root_node->left, input_value);
+	} else {
+			root_node->right = insert(root_node->right, input_value);
+	}
+	
+	return root_node;
+}
+
+
+
+void print_in_order(Node *root) {
+	
+	if (root != NULL) {
+		print_in_order(root->left);
+		std::cout << root->value << " " << std::endl;
+		print_in_order(root->right);
 	}
 }
 
@@ -47,10 +52,17 @@ int main() {
 
 	Node *root = NULL;
 
-	insert(root, 10);
-    insert(root, 20);
-    insert(root, 30);
-    insert(root, 40);
+	root = insert(root, 8);
+    root = insert(root, 2);
+    root = insert(root, 17);
+    root = insert(root, 3);
+	root = insert(root, 15);
+	root = insert(root, 9);
+	root = insert(root, 11);
+	root = insert(root, 19);
+	root = insert(root, 4);
+	root = insert(root, 16);
+	root = insert(root, 12);
 
 	std::cout << "Print: " << std::endl;
 	print_in_order(root);
